@@ -20,9 +20,9 @@ Trang `[số trang]`, kết quả `[kết quả đầu]`~`[kết quả cuối]`
 ...
 10. [từ hàn]
 Trang `[số trang]`, kết quả `[kết quả đầu]`~`[kết quả cuối]`
-11. [từ hàn] [1]
-12. [từ hàn]
-13. [từ hàn] [3]
+12. [từ hàn] [1]
+13. [từ hàn]
+14. [từ hàn] [3]
 ...
 20. [từ hàn]
 
