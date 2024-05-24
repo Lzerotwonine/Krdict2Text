@@ -13,6 +13,7 @@ Giải thích cách trình bày từ một nghĩa và từ nhiều nghĩa:
 
 ## Cấu trúc lưu tiến trình
 
+```
 Trang `[số trang]`, kết quả `[kết quả đầu]`~`[kết quả cuối]`
 1. [từ hàn] [1 (số nếu có)]
 2. [từ hàn]
@@ -25,6 +26,7 @@ Trang `[số trang]`, kết quả `[kết quả đầu]`~`[kết quả cuối]`
 14. [từ hàn] [3]
 ...
 20. [từ hàn]
+```
 
 - Chú thích
   - `[số trang]` được bắt đầu bằng số `1 đến 1595`
