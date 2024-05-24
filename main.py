@@ -29,7 +29,7 @@ class KrDictScraper:
         logging.basicConfig(filename=self.log_path, level=logging.INFO, format='%(asctime)s - %(message)s')
 
         # Cấu hình WebDriver
-        edge_driver_path = os.path.join(self.base_folder, "Selenium", "edgedriver_win64", "msedgedriver.exe")
+        edge_driver_path = os.path.join(self.base_folder, "edgedriver_win64", "msedgedriver.exe")
         service = Service(edge_driver_path)
         self.driver = webdriver.Edge(service=service)
         self.wait = WebDriverWait(self.driver, 10)
