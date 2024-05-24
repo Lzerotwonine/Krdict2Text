@@ -1,6 +1,6 @@
 ### KrDictScraper
 
-KrDictScraper là một công cụ tự động để lấy dữ liệu từ trang web KrDict (Korea-Vietnam Dictionary) và lưu vào một tệp văn bản để sử dụng sau này. Công cụ này được viết bằng Python và sử dụng thư viện Selenium để tự động duyệt web.
+KrDictScraper là một công cụ tự động để lấy dữ liệu từ trang web [KrDict](https://krdict.korean.go.kr/m/vie) (Korea-Vietnam Dictionary) và lưu vào một tệp văn bản để sử dụng sau này. Công cụ này được viết bằng Python và sử dụng thư viện Selenium để tự động duyệt web.
 
 ### Cài Đặt
 
@@ -13,7 +13,7 @@ KrDictScraper là một công cụ tự động để lấy dữ liệu từ tra
 
 #### Bước 1: Cài Đặt Microsoft Edge và Webdriver
 
-Đảm bảo bạn đã cài đặt Microsoft Edge phiên bản 125.0.2535.51 hoặc mới hơn. Sau đó, tải về và cài đặt Webdriver Edge phiên bản 125.0.2535.51 hoặc mới hơn từ trang web chính thức của Selenium.
+Đảm bảo bạn đã cài đặt Microsoft Edge phiên bản 125.0.2535.51 hoặc mới hơn. Sau đó, tải về và cài đặt Webdriver Edge phiên bản 125.0.2535.51 hoặc mới hơn từ trang web chính thức của Microsoft Edge Developer.
 
 #### Bước 2: Cài Đặt Selenium
 
