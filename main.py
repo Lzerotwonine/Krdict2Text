@@ -1,12 +1,12 @@
+import logging
 import os
 import time
-import logging
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
+from selenium.webdriver.edge.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.edge.service import Service
 
 class KrDictScraper:
     def __init__(self):
@@ -15,7 +15,8 @@ class KrDictScraper:
         self.output_path = os.path.join(self.base_folder, "data", "database.txt")
         self.process_path = os.path.join(self.base_folder, "data", "process.txt")
         self.log_path = os.path.join(self.base_folder, "data", "log.txt")
-        self.end_page = 1  # Chạy thử nghiệm trên trang đầu tiên
+        self.end_page = 3  # Chạy thử nghiệm trên trang đầu tiên
+        self.wait_time = 15  # Thời gian chờ mặc định
 
         # Gọi hàm create_process_file() trong __init__()
         self.create_process_file()
@@ -26,7 +27,12 @@ class KrDictScraper:
         else:
             print("Giá trị của trang hiện tại là:", self.current_page)
 
-        logging.basicConfig(filename=self.log_path, level=logging.INFO, format='%(asctime)s - %(message)s')
+        logging.basicConfig(
+            filename=self.log_path,
+            level=logging.INFO,
+            format='%(asctime)s - %(message)s',
+            encoding='utf-8'
+        )
 
         # Cấu hình WebDriver
         edge_driver_path = os.path.join(self.base_folder, "edgedriver_win64", "msedgedriver.exe")
@@ -64,7 +70,9 @@ class KrDictScraper:
             # Gán giá trị mặc định cho current_page
             self.current_page = 1
         except Exception as e:
-            print(f"Lỗi khi tạo file tiến trình: {e}")
+            error_message = f"Lỗi khi tạo file tiến trình: {e}"
+            print(error_message)
+            logging.error(error_message)
 
     def get_data(self, page):
         try:
@@ -75,7 +83,9 @@ class KrDictScraper:
 
             words = self.driver.find_elements(By.CSS_SELECTOR, '.search_result dl')
             if not words:
-                print(f"Không tìm thấy từ nào trên trang {page}")
+                not_found_message = f"Không tìm thấy từ nào trên trang {page}"
+                print(not_found_message)
+                logging.info(not_found_message)
                 return []
 
             data = []
@@ -104,11 +114,10 @@ class KrDictScraper:
                 main_word_sup = f"{main_word}={hanja}"
 
             word_type = dt.find_element(By.CSS_SELECTOR, 'span.word_att_type1').text.strip()
-            word_type_trans = dt.find_element(By.CSS_SELECTOR, 'span.manyLang2').text.strip()
             readings = dt.find_element(By.CSS_SELECTOR, 'span.search_sub').text.strip().replace('\n', '')
 
             # Bắt đầu tạo chuỗi kết quả
-            result = f"{main_word_sup} {word_type} {word_type_trans} {readings}"
+            result = f"{main_word_sup} {word_type} {readings}"
 
             # Lấy thông tin từ các thẻ dd
             dds = word.find_elements(By.CSS_SELECTOR, 'dd')
@@ -152,14 +161,33 @@ class KrDictScraper:
                 result_number = start_result
 
                 for word_data in data:
-                    main_word_info = word_data.split('=')[0]
+                    parts = word_data.split('=')
+                    main_word_info = parts[0].strip()
+
                     if '(' in main_word_info:
                         main_word = main_word_info.split()[0]
                     else:
                         main_word = main_word_info
 
-                    # Lưu số thứ tự và dữ liệu của từ
-                    f.write(f"{result_number}. {main_word}\n")
+                    # Kiểm tra và lấy giá trị của thẻ <sup>
+                    sup_info = ""
+                    if len(parts) > 1:
+                        sup_parts = parts[1].split()
+                        if sup_parts and sup_parts[0].isdigit():
+                            sup_info = sup_parts[0]
+
+                    # Lưu từ và ghi log tương ứng
+                    if sup_info:
+                        f.write(f"{result_number}. {main_word} {sup_info}\n")
+                        message = f"Lưu từ {main_word} {sup_info} trong trang {page}!"
+                    else:
+                        f.write(f"{result_number}. {main_word}\n")
+                        message = f"Lưu từ {main_word} trong trang {page}!"
+
+                    # Ghi thông báo vào log
+                    logging.info(message)
+                    self.log(message)
+
                     result_number += 1
 
                 # Đảm bảo lưu đủ 10 từ cho mỗi trang
@@ -222,7 +250,7 @@ class KrDictScraper:
             # In tổng số từ đã lấy trong trang vào file log
             total_words = len(data)
             logging.info(f"Tổng từ đã lấy trong Trang {page} là {total_words}!")
-        time.sleep(15)
+        time.sleep(self.wait_time)
 
 if __name__ == "__main__":
     scraper = KrDictScraper()
