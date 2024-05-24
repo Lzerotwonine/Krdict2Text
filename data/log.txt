@@ -1,0 +1,77 @@
+2024-05-24 20:08:46,338 - D\u1eef li\u1ec7u ti\u1ebfn tr\xecnh \u0111\u01b0\u1ee3c \u0111\u1ecdc t\u1eeb trang 1.
+2024-05-24 20:08:46,345 - Kh\xf4ng c\xf3 d\u1eef li\u1ec7u t\u1eeb ti\u1ebfn tr\xecnh. Ti\u1ebfp t\u1ee5c l\u1ea5y d\u1eef li\u1ec7u t\u1eeb trang 1...
+2024-05-24 20:08:48,716 - Kh\xf4ng c\xf3 d\u1eef li\u1ec7u t\u1eeb ti\u1ebfn tr\xecnh. Ti\u1ebfp t\u1ee5c l\u1ea5y d\u1eef li\u1ec7u t\u1eeb trang 2...
+2024-05-24 20:08:48,717 - Kh\xf4ng c\xf3 d\u1eef li\u1ec7u t\u1eeb ti\u1ebfn tr\xecnh. Ti\u1ebfp t\u1ee5c l\u1ea5y d\u1eef li\u1ec7u t\u1eeb trang 3...
+2024-05-24 20:08:48,719 - Kh\xf4ng c\xf3 d\u1eef li\u1ec7u t\u1eeb ti\u1ebfn tr\xecnh. Ti\u1ebfp t\u1ee5c l\u1ea5y d\u1eef li\u1ec7u t\u1eeb trang 4...
+2024-05-24 20:11:36,599 - D\u1eef li\u1ec7u ti\u1ebfn tr\xecnh \u0111\u01b0\u1ee3c \u0111\u1ecdc t\u1eeb trang 1.
+2024-05-24 20:11:36,599 - Kh\xf4ng c\xf3 d\u1eef li\u1ec7u t\u1eeb ti\u1ebfn tr\xecnh. Ti\u1ebfp t\u1ee5c l\u1ea5y d\u1eef li\u1ec7u t\u1eeb trang 1...
+2024-05-24 20:11:59,675 - L\u1ea5y \u0111\u01b0\u1ee3c t\u1eeb \uac00 trong Trang 1!
+2024-05-24 20:11:59,788 - L\u1ea5y \u0111\u01b0\u1ee3c t\u1eeb -\uac00 trong Trang 1!
+2024-05-24 20:11:59,900 - L\u1ea5y \u0111\u01b0\u1ee3c t\u1eeb \uac00- trong Trang 1!
+2024-05-24 20:12:00,078 - L\u1ea5y \u0111\u01b0\u1ee3c t\u1eeb \uac00 trong Trang 1!
+2024-05-24 20:12:00,281 - L\u1ea5y \u0111\u01b0\u1ee3c t\u1eeb -\uac00 trong Trang 1!
+2024-05-24 20:12:00,319 - Kh\xf4ng t\xecm th\u1ea5y ph\u1ea7n t\u1eed: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span.word_att_type1"}
+  (Session info: MicrosoftEdge=125.0.2535.51); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6BEEE5FE2+61250]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6BEE70639+207017]
+	(No symbol) [0x00007FF6BEC7E3C7]
+	(No symbol) [0x00007FF6BECC51F3]
+	(No symbol) [0x00007FF6BECC52B6]
+	(No symbol) [0x00007FF6BECBAA4C]
+	(No symbol) [0x00007FF6BECE488F]
+	(No symbol) [0x00007FF6BECBA9F7]
+	(No symbol) [0x00007FF6BECBA8BD]
+	(No symbol) [0x00007FF6BECE4B30]
+	(No symbol) [0x00007FF6BECBA9F7]
+	(No symbol) [0x00007FF6BECFDE07]
+	(No symbol) [0x00007FF6BECE44B3]
+	(No symbol) [0x00007FF6BECB9F1E]
+	(No symbol) [0x00007FF6BECB90DC]
+	(No symbol) [0x00007FF6BECB9AD1]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF6BF09E174+1072532]
+	(No symbol) [0x00007FF6BED32CEC]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6BEDDEE9C+51468]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6BEDD3755+4549]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF6BF09D135+1068373]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6BEE7A041+246449]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6BEE753A4+226836]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6BEE754DB+227147]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6BEE6BCD0+188224]
+	BaseThreadInitThunk [0x00007FFC5F40257D+29]
+	RtlUserThreadStart [0x00007FFC5FF6AA48+40]
+
+2024-05-24 20:12:00,476 - L\u1ea5y \u0111\u01b0\u1ee3c t\u1eeb \uac00 trong Trang 1!
+2024-05-24 20:12:00,694 - L\u1ea5y \u0111\u01b0\u1ee3c t\u1eeb -\uac00 trong Trang 1!
+2024-05-24 20:12:00,742 - Kh\xf4ng t\xecm th\u1ea5y ph\u1ea7n t\u1eed: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span.word_att_type1"}
+  (Session info: MicrosoftEdge=125.0.2535.51); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6BEEE5FE2+61250]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6BEE70639+207017]
+	(No symbol) [0x00007FF6BEC7E3C7]
+	(No symbol) [0x00007FF6BECC51F3]
+	(No symbol) [0x00007FF6BECC52B6]
+	(No symbol) [0x00007FF6BECBAA4C]
+	(No symbol) [0x00007FF6BECE488F]
+	(No symbol) [0x00007FF6BECBA9F7]
+	(No symbol) [0x00007FF6BECBA8BD]
+	(No symbol) [0x00007FF6BECE4B30]
+	(No symbol) [0x00007FF6BECBA9F7]
+	(No symbol) [0x00007FF6BECFDE07]
+	(No symbol) [0x00007FF6BECE44B3]
+	(No symbol) [0x00007FF6BECB9F1E]
+	(No symbol) [0x00007FF6BECB90DC]
+	(No symbol) [0x00007FF6BECB9AD1]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF6BF09E174+1072532]
+	(No symbol) [0x00007FF6BED32CEC]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6BEDDEE9C+51468]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6BEDD3755+4549]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF6BF09D135+1068373]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6BEE7A041+246449]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6BEE753A4+226836]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6BEE754DB+227147]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6BEE6BCD0+188224]
+	BaseThreadInitThunk [0x00007FFC5F40257D+29]
+	RtlUserThreadStart [0x00007FFC5FF6AA48+40]
+
+2024-05-24 20:12:00,961 - L\u1ea5y \u0111\u01b0\u1ee3c t\u1eeb -\uac00 trong Trang 1!
