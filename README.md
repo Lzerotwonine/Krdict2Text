@@ -9,17 +9,17 @@ Ví dụ
 
 Giải thích cách trình bày từ một nghĩa và từ nhiều nghĩa:
 - [từ hàn]=[1 (nếu có, thể hiện một từ chia làm từng phần giải nghĩa)][từ hán, từ loại; cách đọc][\n (với \n để thể hiện xuống dòng)][phần giải nghĩa][\n][câu tiếng hàn ví dụ][\n][câu tiếng việt giải nghĩa câu ví dụ trên]
-- [từ hàn]=[1][từ hán, từ loại; cách đọc][\n][\t (để đánh số cho từng loại nghĩa)][1. phần giải nghĩa thứ 1][\n][câu tiếng hàn ví dụ 1][\n][câu tiếng việt giải nghĩa câu ví dụ trên][\n][\t][2. phần giải nghĩa thứ 2][\n][câu tiếng hàn ví dụ 2][\n][câu tiếng việt giải nghĩa câu ví dụ trên]
+- [từ hàn]=[1][từ hán, từ loại; cách đọc][\n][\t (để đánh số cho từng loại nghĩa)][1. phần giải nghĩa thứ 1][\n][câu tiếng hàn ví dụ 1][\n][câu tiếng việt giải nghĩa câu ví dụ 1 trên][\n][\t][2. phần giải nghĩa thứ 2][\n][câu tiếng hàn ví dụ 2][\n][câu tiếng việt giải nghĩa câu ví dụ 2 trên]
 
 ## Cấu trúc lưu tiến trình
 
-Trang [số trang], kết quả [kết quả đầu]~[kết quả cuối]
+Trang `[số trang]`, kết quả `[kết quả đầu]`~`[kết quả cuối]`
 1. [từ hàn] [1 (số nếu có)]
 2. [từ hàn]
 3. [từ hàn] [3]
 ...
 10. [từ hàn]
-Trang [số trang], kết quả [kết quả đầu]~[kết quả cuối]
+Trang `[số trang]`, kết quả `[kết quả đầu]`~`[kết quả cuối]`
 11. [từ hàn] [1]
 12. [từ hàn]
 13. [từ hàn] [3]
@@ -27,9 +27,9 @@ Trang [số trang], kết quả [kết quả đầu]~[kết quả cuối]
 20. [từ hàn]
 
 - Chú thích
-  - `[số trang] được bắt đầu bằng số 1 đến 1595`
-  - `[kết quả đầu] được tính bằng ([số trang] - 1) * 10 + 1`
-  - `[kết quả cuối] được tính bằng [số trang] * 10`
+  - `[số trang]` được bắt đầu bằng số `1 đến 1595`
+  - `[kết quả đầu]` được tính bằng `([số trang] - 1) * 10 + 1`
+  - `[kết quả cuối]` được tính bằng `[số trang] * 10`
 
 ## Cài Đặt
 
