@@ -8,19 +8,24 @@ Ví dụ
 - Từ nhiều nghĩa: 가계=2 (家計) 「명사」 Danh từ [가계듣기/가게듣기]\n\t1. hộ kinh doanh\n경제 단위로서의 가정.\nGia đình với tư cách là đơn vị kinh tế.\n\t2. kinh tế gia đình\n한 집안의 경제를 이끌어 나가는 방법이나 형편.\nTình hình hay phương pháp đưa kinh tế của một gia đình đi lên.
 
 Giải thích cách trình bày từ một nghĩa và từ nhiều nghĩa:
-- [từ hàn]=[1 (nếu có, thể hiện một từ chia làm từng phần giải nghĩa)][từ hán, từ loại; cách đọc][\n (với \n để thể hiện xuống dòng)][phần giải nghĩa][\n][câu tiếng hàn ví dụ][\n][câu tiếng việt giải nghĩa câu ví dụ trên]
-- [từ hàn]=[1][từ hán, từ loại; cách đọc][\n][\t (để đánh số cho từng loại nghĩa)][1. phần giải nghĩa thứ 1][\n][câu tiếng hàn ví dụ 1][\n][câu tiếng việt giải nghĩa câu ví dụ 1 trên][\n][\t][2. phần giải nghĩa thứ 2][\n][câu tiếng hàn ví dụ 2][\n][câu tiếng việt giải nghĩa câu ví dụ 2 trên]
+- [từ hàn]=[1][từ hán; từ loại; cách đọc][\n][phần giải nghĩa][\n][câu tiếng hàn ví dụ][\n][câu tiếng việt giải nghĩa câu ví dụ trên]
+- [từ hàn]=[1][từ hán; từ loại; cách đọc][\n][\t][1. phần giải nghĩa thứ 1][\n][câu tiếng hàn ví dụ 1][\n][câu tiếng việt giải nghĩa câu ví dụ 1 trên][\n][\t][2. phần giải nghĩa thứ 2][\n][câu tiếng hàn ví dụ 2][\n][câu tiếng việt giải nghĩa câu ví dụ 2 trên]
+
+- Chú thích
+  - `[1]` thể hiện một từ chia làm từng phần giải nghĩa.
+  - `[\n]` thể hiện xuống dòng.
+  - `[\t]` thể hiện đánh số cho từng loại nghĩa.
 
 ## Cấu trúc lưu tiến trình
 
 ```
-Trang `[số trang]`, kết quả `[kết quả đầu]`~`[kết quả cuối]`
+Trang [số trang], kết quả [kết quả đầu]~[kết quả cuối]
 1. [từ hàn] [1 (số nếu có)]
 2. [từ hàn]
 3. [từ hàn] [3]
 ...
 10. [từ hàn]
-Trang `[số trang]`, kết quả `[kết quả đầu]`~`[kết quả cuối]`
+Trang [số trang], kết quả [kết quả đầu]~[kết quả cuối]
 12. [từ hàn] [1]
 13. [từ hàn]
 14. [từ hàn] [3]
@@ -29,9 +34,9 @@ Trang `[số trang]`, kết quả `[kết quả đầu]`~`[kết quả cuối]`
 ```
 
 - Chú thích
-  - `[số trang]` được bắt đầu bằng số `1 đến 1595`
-  - `[kết quả đầu]` được tính bằng `([số trang] - 1) * 10 + 1`
-  - `[kết quả cuối]` được tính bằng `[số trang] * 10`
+  - `[số trang]` được bắt đầu bằng số `1 đến 1595`.
+  - `[kết quả đầu]` được tính bằng `([số trang] - 1) * 10 + 1`.
+  - `[kết quả cuối]` được tính bằng `[số trang] * 10`.
 
 ## Cài Đặt
 
