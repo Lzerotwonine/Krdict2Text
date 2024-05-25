@@ -15,7 +15,7 @@ class KrDictScraper:
         self.output_path = os.path.join(self.base_folder, "data", "database.txt")
         self.process_path = os.path.join(self.base_folder, "data", "process.txt")
         self.log_path = os.path.join(self.base_folder, "data", "log.txt")
-        self.end_page = 4  # Chạy thử nghiệm trên trang đầu tiên
+        self.end_page = 5  # Trang kết thúc nếu muốn chạy hết là 1595
         self.wait_time = 20  # Thời gian chờ mặc định
 
         logging.basicConfig(
