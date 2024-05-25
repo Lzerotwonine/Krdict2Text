@@ -2,7 +2,7 @@ import logging
 import os
 import time
 from selenium import webdriver
-from selenium.common import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
@@ -15,17 +15,8 @@ class KrDictScraper:
         self.output_path = os.path.join(self.base_folder, "data", "database.txt")
         self.process_path = os.path.join(self.base_folder, "data", "process.txt")
         self.log_path = os.path.join(self.base_folder, "data", "log.txt")
-        self.end_page = 3  # Chạy thử nghiệm trên trang đầu tiên
-        self.wait_time = 15  # Thời gian chờ mặc định
-
-        # Gọi hàm create_process_file() trong __init__()
-        self.create_process_file()
-
-        # Kiểm tra giá trị của self.current_page
-        if self.current_page is None:
-            print("Giá trị của self.current_page là None sau khi gọi hàm create_process_file() trong __init__.")
-        else:
-            print("Giá trị của trang hiện tại là:", self.current_page)
+        self.end_page = 4  # Chạy thử nghiệm trên trang đầu tiên
+        self.wait_time = 20  # Thời gian chờ mặc định
 
         logging.basicConfig(
             filename=self.log_path,
@@ -34,45 +25,42 @@ class KrDictScraper:
             encoding='utf-8'
         )
 
-        # Cấu hình WebDriver
         edge_driver_path = os.path.join(self.base_folder, "edgedriver_win64", "msedgedriver.exe")
         service = Service(edge_driver_path)
         self.driver = webdriver.Edge(service=service)
         self.wait = WebDriverWait(self.driver, 10)
 
+        self.current_page = self.get_last_saved_page()
+        if self.current_page is None:
+            self.create_process_file()
+            self.current_page = 0  # Gán self.current_page = 0 nếu không tìm thấy file tiến trình
+        else:
+            print("Giá trị của trang hiện tại là:", self.current_page)
+
     def get_last_saved_page(self):
+        last_page = None
         try:
             with open(self.process_path, "r", encoding="utf-8") as f:
                 lines = f.readlines()
+                print("Đang đọc các dòng trong file tiến trình:")
                 for line in lines:
-                    # Tìm dòng chứa số thứ tự và trang
+                    print(line.strip())  # In ra từng dòng trong file để kiểm tra
                     if line.startswith("Trang"):
-                        continue
-                    if line.strip() and line.strip()[1:].isdigit():
-                        index = int(line.split(".")[0])
-                        # Bỏ qua các số thứ tự đã được lưu
-                        if index > 10:
-                            # Đọc dữ liệu từ vị trí này
-                            data = lines[index-1]
-                            # Bỏ số thứ tự và dấu cách ở đầu dòng
-                            return data[3:].strip()
+                        parts = line.split(",")
+                        last_page = int(parts[0].split()[1])  # Lấy chỉ số 1 sau khi tách dòng thành các phần
+                print(f"Đã tìm thấy trang cuối cùng: {last_page}")  # In ra trang cuối cùng được tìm thấy
         except FileNotFoundError:
-            print("Không tìm thấy file tiến trình. Tạo file mới.")
-            self.create_process_file()
+            logging.info("Không tìm thấy file tiến trình. Tạo file mới.")
         except Exception as e:
-            print(f"Lỗi khi đọc tiến trình: {e}")
-        return None
+            logging.error(f"Lỗi khi đọc tiến trình: {e}")
+        return last_page
 
     def create_process_file(self):
         try:
             with open(self.process_path, "w", encoding="utf-8"):
-                pass  # Không ghi bất kỳ thông tin nào
-            # Gán giá trị mặc định cho current_page
-            self.current_page = 1
+                pass
         except Exception as e:
-            error_message = f"Lỗi khi tạo file tiến trình: {e}"
-            print(error_message)
-            logging.error(error_message)
+            logging.error(f"Lỗi khi tạo file tiến trình: {e}")
 
     def get_data(self, page):
         try:
@@ -95,20 +83,22 @@ class KrDictScraper:
                     data.append(word_data)
 
             return data
+        except TimeoutException:
+            logging.error(f"Lỗi timeout khi tải trang {page}")
+            return None
         except Exception as e:
-            print(f"Lỗi khi lấy dữ liệu từ trang {page}: {e}")
+            logging.error(f"Lỗi khi lấy dữ liệu từ trang {page}: {e}")
             return None
 
     def parse_word(self, word):
         try:
-            # Lấy thông tin từ thẻ dt
             dt = word.find_element(By.TAG_NAME, 'dt')
             main_word = dt.find_element(By.CSS_SELECTOR, 'span.word_type1_17').text.strip()
             sup = dt.find_elements(By.TAG_NAME, 'sup')
             hanja = dt.find_element(By.XPATH, 'span[not(@class)]').text.strip() if dt.find_elements(By.XPATH, 'span[not(@class)]') else ""
 
             if sup:
-                main_word = main_word.split()[0]  # Loại bỏ số trong main_word
+                main_word = main_word.split()[0]
                 main_word_sup = f"{main_word}={sup[0].text.strip()} {hanja}"
             else:
                 main_word_sup = f"{main_word}={hanja}"
@@ -116,19 +106,15 @@ class KrDictScraper:
             word_type = dt.find_element(By.CSS_SELECTOR, 'span.word_att_type1').text.strip()
             readings = dt.find_element(By.CSS_SELECTOR, 'span.search_sub').text.strip().replace('\n', '')
 
-            # Bắt đầu tạo chuỗi kết quả
             result = f"{main_word_sup} {word_type} {readings}"
 
-            # Lấy thông tin từ các thẻ dd
             dds = word.find_elements(By.CSS_SELECTOR, 'dd')
             for dd in dds:
-                # Nếu dd chứa thẻ strong, thì đây là phần giải nghĩa số
                 if dd.find_elements(By.TAG_NAME, 'strong'):
                     result += f"\\n\\t{dd.text.strip()}"
                 else:
                     result += f"\\n{dd.text.strip()}"
 
-            # In thông báo và ghi log
             logging.info(f"Lấy được từ {main_word} trong Trang {self.current_page}!")
 
             return result
@@ -145,19 +131,26 @@ class KrDictScraper:
                 for word_data in data:
                     f.write(word_data + "\n")
         except Exception as e:
-            print(f"Lỗi khi lưu dữ liệu: {e}")
+            logging.error(f"Lỗi khi lưu dữ liệu: {e}")
 
     def save_process(self, data, page):
         try:
+            append_mode = True
+            if os.path.exists(self.process_path):
+                with open(self.process_path, "r+", encoding="utf-8") as f:
+                    lines = f.readlines()
+                    if lines:
+                        last_line = lines[-1]
+                        if last_line.strip() and last_line.startswith("Trang"):
+                            append_mode = False
+                            f.write("\n")  # Thêm dòng mới nếu có dữ liệu tiến trình cũ
+
             with open(self.process_path, "a", encoding="utf-8") as f:
-                # Tính toán số kết quả bắt đầu và kết thúc cho trang hiện tại
                 start_result = (page - 1) * 10 + 1
                 end_result = page * 10
 
-                # Ghi thông tin trang và kết quả
                 f.write(f"Trang {page}, kết quả {start_result}~{end_result}\n")
 
-                # Biến để đánh số kết quả
                 result_number = start_result
 
                 for word_data in data:
@@ -169,14 +162,12 @@ class KrDictScraper:
                     else:
                         main_word = main_word_info
 
-                    # Kiểm tra và lấy giá trị của thẻ <sup>
                     sup_info = ""
                     if len(parts) > 1:
                         sup_parts = parts[1].split()
                         if sup_parts and sup_parts[0].isdigit():
                             sup_info = sup_parts[0]
 
-                    # Lưu từ và ghi log tương ứng
                     if sup_info:
                         f.write(f"{result_number}. {main_word} {sup_info}\n")
                         message = f"Lưu từ {main_word} {sup_info} trong trang {page}!"
@@ -184,55 +175,38 @@ class KrDictScraper:
                         f.write(f"{result_number}. {main_word}\n")
                         message = f"Lưu từ {main_word} trong trang {page}!"
 
-                    # Ghi thông báo vào log
                     logging.info(message)
                     self.log(message)
 
                     result_number += 1
 
-                # Đảm bảo lưu đủ 10 từ cho mỗi trang
+                self.current_page = page
+
                 for j in range(result_number, end_result + 1):
-                    f.write(f"{j}. \n")   # Lưu một dòng trống để đảm bảo có 10 dòng
+                    f.write(f"{j}. \n")
         except Exception as e:
-            print(f"Lỗi khi lưu tiến trình: {e}")
+            logging.error(f"Lỗi khi lưu tiến trình: {e}")
 
     def log(self, message):
         try:
             with open(self.log_path, "a", encoding="utf-8") as f:
                 f.write(f"{time.strftime('%Y-%m-%d %H:%M:%S')} - {message}\n")
         except Exception as e:
-            print(f"Lỗi khi ghi log: {e}")
+            logging.error(f"Lỗi khi ghi log: {e}")
 
     def scrape(self):
-        # Kiểm tra xem có dữ liệu tiến trình hay không
-        if self.current_page is None:
-            print("Không tìm thấy file tiến trình. Chạy lại từ trang đầu để có dữ liệu tiến trình.")
-            logging.info("Không tìm thấy file tiến trình. Chạy lại từ trang đầu để có dữ liệu tiến trình.")
-            self.current_page = 1
-        else:
-            print(f"Dữ liệu tiến trình được đọc từ trang {self.current_page}.")
-            logging.info(f"Dữ liệu tiến trình được đọc từ trang {self.current_page}.")
+        start_page = self.current_page + 1
 
-        while self.current_page <= self.end_page:
-            # Đọc dữ liệu từ tiến trình
-            data = self.get_last_saved_page()
+        if start_page > self.end_page:
+            print("Đã thu thập đủ dữ liệu của trang yêu cầu!")
+            logging.info("Đã thu thập đủ dữ liệu của trang yêu cầu!")
+            return
 
-            # Nếu không có dữ liệu từ tiến trình, tiếp tục lấy dữ liệu từ trang đầu tiên
-            if data is None:
-                print(f"Không có dữ liệu từ tiến trình. Tiếp tục lấy dữ liệu từ trang {self.current_page}...")
-                logging.info(f"Không có dữ liệu từ tiến trình. Tiếp tục lấy dữ liệu từ trang {self.current_page}...")
-                data = self.get_data(self.current_page)
-            else:
-                print("Đang lấy dữ liệu từ tiến trình...")
-                logging.info("Đang lấy dữ liệu từ tiến trình...")
-                print(f"Dữ liệu được lấy từ tiến trình: {data}")
-                logging.info(f"Dữ liệu được lấy từ tiến trình: {data}")
-
-            # Nếu có dữ liệu, lưu và tiếp tục
-            if data:
-                self.save_data(data, self.current_page)
-                self.save_process(data, self.current_page)
-            self.current_page += 1
+        # Tiếp tục lấy dữ liệu từ các trang tiếp theo
+        for page in range(start_page, self.end_page + 1):
+            print(f"Tiếp tục lấy dữ liệu từ trang {page}...")
+            logging.info(f"Tiếp tục lấy dữ liệu từ trang {page}...")
+            self.scrape_page(page)
 
         self.driver.quit()
 
@@ -250,6 +224,9 @@ class KrDictScraper:
             # In tổng số từ đã lấy trong trang vào file log
             total_words = len(data)
             logging.info(f"Tổng từ đã lấy trong Trang {page} là {total_words}!")
+
+            # Cập nhật self.current_page sau khi lấy dữ liệu từ trang hiện tại
+            self.current_page = page
         time.sleep(self.wait_time)
 
 if __name__ == "__main__":
