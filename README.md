@@ -7,6 +7,8 @@ KrDictScraper là một công cụ tự động để lấy dữ liệu từ tra
 - Hoàn thiện vào 25/05/2024
 
 ## Cấu trúc lưu dữ liệu
+Có thể xem dữ liệu mẫu ở đây: [data_sample](https://github.com/Lzerotwonine/KrdictScraper/tree/main/data_sample)
+
 Ví dụ
 - Từ một nghĩa: 가계=1 (家系) 「명사」 Danh từ [가계듣기/가게듣기]\ngia tộc, dòng dõi\n조상에서부터 후손으로 이어지는 한 집안.\nMột gia đình được tiếp nối từ tổ tiên tới con cháu hậu thế.
 - Từ nhiều nghĩa: 가계=2 (家計) 「명사」 Danh từ [가계듣기/가게듣기]\n\t1. hộ kinh doanh\n경제 단위로서의 가정.\nGia đình với tư cách là đơn vị kinh tế.\n\t2. kinh tế gia đình\n한 집안의 경제를 이끌어 나가는 방법이나 형편.\nTình hình hay phương pháp đưa kinh tế của một gia đình đi lên.
