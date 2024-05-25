@@ -7,7 +7,7 @@ KrDictScraper là một công cụ tự động để lấy dữ liệu từ tra
 - Hoàn thiện vào 25/05/2024
 
 ## Cấu trúc lưu dữ liệu
-Có thể xem dữ liệu mẫu ở đây: [data_sample](https://github.com/Lzerotwonine/KrdictScraper/tree/main/data_sample)
+Có thể xem dữ liệu mẫu ở đây: [data_sample](data_sample)
 
 Ví dụ
 - Từ một nghĩa: 가계=1 (家系) 「명사」 Danh từ [가계듣기/가게듣기]\ngia tộc, dòng dõi\n조상에서부터 후손으로 이어지는 한 집안.\nMột gia đình được tiếp nối từ tổ tiên tới con cháu hậu thế.
@@ -85,6 +85,6 @@ Khi chạy, chương trình sẽ tự động lấy dữ liệu từ trang KrDic
 
 Nếu bạn muốn đóng góp vào dự án, vui lòng mở một yêu cầu kéo trên GitHub và chúng tôi sẽ xem xét.
 
-### Giấy Phép
+## Giấy Phép
 
 Dự án được cấp phép dưới Giấy Phép GPL-3.0. Xem tệp [LICENSE](LICENSE) để biết chi tiết.
