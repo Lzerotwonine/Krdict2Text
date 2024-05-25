@@ -48,10 +48,10 @@ Trang [số trang], kết quả [kết quả đầu]~[kết quả cuối]
 
 ### Yêu Cầu
 
-- Microsoft Edge Version 125.0.2535.51 hoặc mới hơn
-- Webdriver Edge Version 125.0.2535.51 Win64 hoặc mới hơn
-- Selenium 4.21.0 hoặc mới hơn
-- Python 3.11 hoặc mới hơn
+- Microsoft Edge `125.0.2535.51` hoặc mới hơn/Chrome `125.0.6422.78` hoặc mới hơn
+- Webdriver Edge `125.0.2535.51` Win64 hoặc mới hơn/Chrome `125.0.6422.78` hoặc mới hơn
+- Selenium `4.21.0` hoặc mới hơn
+- Python `3.11` hoặc mới hơn
 
 #### Bước 1: Cài Đặt Microsoft Edge hoặc Chrome và Webdriver
 
