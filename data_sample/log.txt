@@ -1,0 +1,91 @@
+2024-05-25 08:34:31,687 - Không tìm thấy file tiến trình. Tạo file mới.
+2024-05-25 08:34:31,687 - Tiếp tục lấy dữ liệu từ trang 1...
+2024-05-25 08:34:37,045 - Lấy được từ 가 trong Trang 0!
+2024-05-25 08:34:37,154 - Lấy được từ -가 trong Trang 0!
+2024-05-25 08:34:37,261 - Lấy được từ 가- trong Trang 0!
+2024-05-25 08:34:37,429 - Lấy được từ 가 trong Trang 0!
+2024-05-25 08:34:37,627 - Lấy được từ -가 trong Trang 0!
+2024-05-25 08:34:37,669 - Không tìm thấy phần tử: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span.word_att_type1"}
+  (Session info: MicrosoftEdge=125.0.2535.51); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF678175FE2+61250]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF678100639+207017]
+	(No symbol) [0x00007FF677F0E3C7]
+	(No symbol) [0x00007FF677F551F3]
+	(No symbol) [0x00007FF677F552B6]
+	(No symbol) [0x00007FF677F4AA4C]
+	(No symbol) [0x00007FF677F7488F]
+	(No symbol) [0x00007FF677F4A9F7]
+	(No symbol) [0x00007FF677F4A8BD]
+	(No symbol) [0x00007FF677F74B30]
+	(No symbol) [0x00007FF677F4A9F7]
+	(No symbol) [0x00007FF677F8DE07]
+	(No symbol) [0x00007FF677F744B3]
+	(No symbol) [0x00007FF677F49F1E]
+	(No symbol) [0x00007FF677F490DC]
+	(No symbol) [0x00007FF677F49AD1]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF67832E174+1072532]
+	(No symbol) [0x00007FF677FC2CEC]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF67806EE9C+51468]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF678063755+4549]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF67832D135+1068373]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF67810A041+246449]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6781053A4+226836]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6781054DB+227147]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6780FBCD0+188224]
+	BaseThreadInitThunk [0x00007FFC1C45257D+29]
+	RtlUserThreadStart [0x00007FFC1DEAAA48+40]
+
+2024-05-25 08:34:37,825 - Lấy được từ 가 trong Trang 0!
+2024-05-25 08:34:37,925 - Lấy được từ -가 trong Trang 0!
+2024-05-25 08:34:37,962 - Không tìm thấy phần tử: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span.word_att_type1"}
+  (Session info: MicrosoftEdge=125.0.2535.51); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF678175FE2+61250]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF678100639+207017]
+	(No symbol) [0x00007FF677F0E3C7]
+	(No symbol) [0x00007FF677F551F3]
+	(No symbol) [0x00007FF677F552B6]
+	(No symbol) [0x00007FF677F4AA4C]
+	(No symbol) [0x00007FF677F7488F]
+	(No symbol) [0x00007FF677F4A9F7]
+	(No symbol) [0x00007FF677F4A8BD]
+	(No symbol) [0x00007FF677F74B30]
+	(No symbol) [0x00007FF677F4A9F7]
+	(No symbol) [0x00007FF677F8DE07]
+	(No symbol) [0x00007FF677F744B3]
+	(No symbol) [0x00007FF677F49F1E]
+	(No symbol) [0x00007FF677F490DC]
+	(No symbol) [0x00007FF677F49AD1]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF67832E174+1072532]
+	(No symbol) [0x00007FF677FC2CEC]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF67806EE9C+51468]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF678063755+4549]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF67832D135+1068373]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF67810A041+246449]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6781053A4+226836]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6781054DB+227147]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6780FBCD0+188224]
+	BaseThreadInitThunk [0x00007FFC1C45257D+29]
+	RtlUserThreadStart [0x00007FFC1DEAAA48+40]
+
+2024-05-25 08:34:38,062 - Lấy được từ -가 trong Trang 0!
+2024-05-25 08:34:38,062 - Lưu từ 가 1 trong trang 1!
+2024-05-25 08:34:38 - Lưu từ 가 1 trong trang 1!
+2024-05-25 08:34:38,063 - Lưu từ -가 1 trong trang 1!
+2024-05-25 08:34:38 - Lưu từ -가 1 trong trang 1!
+2024-05-25 08:34:38,063 - Lưu từ 가- 1 trong trang 1!
+2024-05-25 08:34:38 - Lưu từ 가- 1 trong trang 1!
+2024-05-25 08:34:38,063 - Lưu từ 가 2 trong trang 1!
+2024-05-25 08:34:38 - Lưu từ 가 2 trong trang 1!
+2024-05-25 08:34:38,063 - Lưu từ -가 2 trong trang 1!
+2024-05-25 08:34:38 - Lưu từ -가 2 trong trang 1!
+2024-05-25 08:34:38,063 - Lưu từ 가 3 trong trang 1!
+2024-05-25 08:34:38 - Lưu từ 가 3 trong trang 1!
+2024-05-25 08:34:38,063 - Lưu từ -가 3 trong trang 1!
+2024-05-25 08:34:38 - Lưu từ -가 3 trong trang 1!
+2024-05-25 08:34:38,064 - Lưu từ -가 4 trong trang 1!
+2024-05-25 08:34:38 - Lưu từ -가 4 trong trang 1!
+2024-05-25 08:34:38,064 - Đã lấy dữ liệu từ trang 1 trong 6.38 giây
+2024-05-25 08:34:38 - Đã lấy dữ liệu từ trang 1 trong 6.38 giây
+2024-05-25 08:34:38,064 - Tổng từ đã lấy trong Trang 1 là 8!
