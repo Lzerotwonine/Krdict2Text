@@ -49,13 +49,15 @@ Trang [số trang], kết quả [kết quả đầu]~[kết quả cuối]
 ### Yêu Cầu
 
 - Microsoft Edge Version 125.0.2535.51 hoặc mới hơn
-- Webdriver Edge Version 125.0.2535.51 hoặc mới hơn
+- Webdriver Edge Version 125.0.2535.51 Win64 hoặc mới hơn
 - Selenium 4.21.0 hoặc mới hơn
 - Python 3.11 hoặc mới hơn
 
-#### Bước 1: Cài Đặt Microsoft Edge và Webdriver
+#### Bước 1: Cài Đặt Microsoft Edge hoặc Chrome và Webdriver
 
-Đảm bảo bạn đã cài đặt Microsoft Edge phiên bản 125.0.2535.51 hoặc mới hơn. Sau đó, tải về và cài đặt Webdriver Edge phiên bản 125.0.2535.51 hoặc mới hơn từ trang web chính thức của Microsoft Edge Developer.
+Đảm bảo bạn đã cài đặt Microsoft Edge phiên bản 125.0.2535.51 hoặc mới hơn. Sau đó, tải về và cài đặt Webdriver Edge phiên bản 125.0.2535.51 Win64 hoặc mới hơn từ trang web chính thức của Microsoft Edge Developer.
+
+Nếu dùng Chrome, đảm bảo bạn đã cài đặt Chrome phiên bản 125.0.6422.78 hoặc mới hơn. Sau đó, tải về và cài đặt Webdriver Chrome phiên bản 125.0.6422.78 Win64 hoặc mới hơn từ trang web chính thức của Chrome for Testing.
 
 #### Bước 2: Cài Đặt Selenium
 
@@ -75,6 +77,12 @@ Chạy chương trình bằng cách chạy tệp `main.py`:
 
 ```bash
 python main.py
+```
+
+Chạy tệp `main_chrome.py` nếu dùng Chrome:
+
+```bash
+python main_chrome.py
 ```
 
 ## Sử Dụng
