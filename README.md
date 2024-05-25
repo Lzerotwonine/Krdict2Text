@@ -2,6 +2,10 @@
 
 KrDictScraper là một công cụ tự động để lấy dữ liệu từ trang web [KrDict](https://krdict.korean.go.kr/m/vie) (Korea-Vietnam Dictionary) và lưu vào một tệp văn bản để sử dụng sau này. Công cụ này được viết bằng Python và sử dụng thư viện Selenium để tự động duyệt web.
 
+## Thời gian phát triển
+- Bắt đầu từ 22/05/2024
+- Hoàn thiện vào 25/05/2024
+
 ## Cấu trúc lưu dữ liệu
 Ví dụ
 - Từ một nghĩa: 가계=1 (家系) 「명사」 Danh từ [가계듣기/가게듣기]\ngia tộc, dòng dõi\n조상에서부터 후손으로 이어지는 한 집안.\nMột gia đình được tiếp nối từ tổ tiên tới con cháu hậu thế.
