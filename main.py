@@ -1,6 +1,7 @@
 import logging
 import os
 import time
+import random
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.by import By
@@ -17,7 +18,8 @@ class KrDictScraper:
         self.process_path = os.path.join(self.base_folder, "data", "process.txt")
         self.log_path = os.path.join(self.base_folder, "data", "log.txt")
         self.end_page = 5  # Trang kết thúc nếu muốn chạy hết là 1595
-        self.wait_time = 20  # Thời gian chờ mặc định
+        self.wait_time_min = 5  # Thời gian chờ tối thiểu
+        self.wait_time_max = 20  # Thời gian chờ tối đa
 
         logging.basicConfig(
             filename=self.log_path,
@@ -104,7 +106,9 @@ class KrDictScraper:
             else:
                 main_word_sup = f"{main_word}={hanja}"
 
-            word_type = dt.find_element(By.CSS_SELECTOR, 'span.word_att_type1').text.strip()
+            # Kiểm tra sự tồn tại của phần tử trước khi truy cập
+            word_type_elements = dt.find_elements(By.CSS_SELECTOR, 'span.word_att_type1')
+            word_type = word_type_elements[0].text.strip() if word_type_elements else ""
             readings = dt.find_element(By.CSS_SELECTOR, 'span.search_sub').text.strip().replace('\n', '')
 
             result = f"{main_word_sup} {word_type} {readings}"
@@ -120,10 +124,10 @@ class KrDictScraper:
 
             return result
         except NoSuchElementException as e:
-            logging.error(f"Không tìm thấy phần tử: {e}")
+            logging.error(f"Không tìm thấy phần tử khi xử lý từ: {e}\nDữ liệu từ: {word.text}")
             return ""
         except Exception as e:
-            logging.error(f"Lỗi khi phân tích từ: {e}")
+            logging.error(f"Lỗi khi phân tích từ: {e}\nDữ liệu từ: {word.text}")
             return ""
 
     def save_data(self, data, page):
@@ -228,7 +232,8 @@ class KrDictScraper:
 
             # Cập nhật self.current_page sau khi lấy dữ liệu từ trang hiện tại
             self.current_page = page
-        time.sleep(self.wait_time)
+        wait_time = random.uniform(self.wait_time_min, self.wait_time_max)
+        time.sleep(wait_time)
 
 
 if __name__ == "__main__":
