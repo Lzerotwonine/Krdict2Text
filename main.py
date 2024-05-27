@@ -8,6 +8,7 @@ from selenium.webdriver.edge.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class KrDictScraper:
     def __init__(self):
         self.base_url = "https://krdict.korean.go.kr/m/vie/searchDetailWordsResult?searchFlag=Y&nation=vie&nationCode=2&currentPage={}&divSearch=detail&ParaWordNo=&syllablePosition=&gubun_all=ALL&gubun=W&gubun=P&gubun=E&nativeCode_all=ALL&nativeCode=1&nativeCode=2&nativeCode=3&nativeCode=0&sp_code_all=ALL&sp_code=1&sp_code=2&sp_code=3&sp_code=4&sp_code=5&sp_code=6&sp_code=7&sp_code=8&sp_code=9&sp_code=10&sp_code=11&sp_code=12&sp_code=13&sp_code=14&sp_code=27&im_cnt_all=ALL&im_cnt=3&im_cnt=2&im_cnt=1&im_cnt=0&multimedia_all=ALL&multimedia=P&multimedia=I&multimedia=V&multimedia=A&multimedia=S&multimedia=N&searchSyllableStart=&searchSyllableEnd=&searchOp=AND&searchTarget=word&searchOrglanguage=all&wordCondition=wordAll&query=&_csrf=494b9051-0fba-4be7-9b33-3fe1866c83e2"
@@ -30,14 +31,14 @@ class KrDictScraper:
         self.driver = webdriver.Edge(service=service)
         self.wait = WebDriverWait(self.driver, 10)
 
-        self.current_page = self.get_last_saved_page()
+        self.current_page = self.get_process()
         if self.current_page is None:
             self.create_process_file()
             self.current_page = 0  # Gán self.current_page = 0 nếu không tìm thấy file tiến trình
         else:
             print("Giá trị của trang hiện tại là:", self.current_page)
 
-    def get_last_saved_page(self):
+    def get_process(self):
         last_page = None
         try:
             with open(self.process_path, "r", encoding="utf-8") as f:
@@ -228,6 +229,7 @@ class KrDictScraper:
             # Cập nhật self.current_page sau khi lấy dữ liệu từ trang hiện tại
             self.current_page = page
         time.sleep(self.wait_time)
+
 
 if __name__ == "__main__":
     scraper = KrDictScraper()
