@@ -94,41 +94,42 @@ class KrDictScraper:
             return None
 
     def parse_word(self, word):
-        try:
-            dt = word.find_element(By.TAG_NAME, 'dt')
-            main_word = dt.find_element(By.CSS_SELECTOR, 'span.word_type1_17').text.strip()
-            sup = dt.find_elements(By.TAG_NAME, 'sup')
-            hanja = dt.find_element(By.XPATH, 'span[not(@class)]').text.strip() if dt.find_elements(By.XPATH, 'span[not(@class)]') else ""
+    try:
+        dt = word.find_element(By.TAG_NAME, 'dt')
+        main_word = dt.find_element(By.CSS_SELECTOR, 'span.word_type1_17').text.strip()
+        sup = dt.find_elements(By.TAG_NAME, 'sup')
+        hanja = dt.find_element(By.XPATH, 'span[not(@class)]').text.strip() if dt.find_elements(By.XPATH, 'span[not(@class)]') else ""
 
-            if sup:
-                main_word = main_word.split()[0]
-                main_word_sup = f"{main_word}={sup[0].text.strip()} {hanja}"
-            else:
-                main_word_sup = f"{main_word}={hanja}"
+        if sup:
+            main_word = main_word.split()[0]
+            main_word_sup = f"{main_word}={sup[0].text.strip()} {hanja}"
+        else:
+            main_word_sup = f"{main_word}={hanja}"
 
-            # Kiểm tra sự tồn tại của phần tử trước khi truy cập
-            word_type_elements = dt.find_elements(By.CSS_SELECTOR, 'span.word_att_type1')
-            word_type = word_type_elements[0].text.strip() if word_type_elements else ""
-            readings = dt.find_element(By.CSS_SELECTOR, 'span.search_sub').text.strip().replace('\n', '')
+        word_type_elements = dt.find_elements(By.CSS_SELECTOR, 'span.word_att_type1')
+        word_type = word_type_elements[0].text.strip() if word_type_elements else ""
+        readings = dt.find_element(By.CSS_SELECTOR, 'span.search_sub').text.strip().replace('\n', '')
 
-            result = f"{main_word_sup} {word_type} {readings}"
+        result = f"{main_word_sup} {word_type} {readings}"
 
-            dds = word.find_elements(By.CSS_SELECTOR, 'dd')
-            for dd in dds:
+        dds = word.find_elements(By.CSS_SELECTOR, 'dd')
+        for dd in dds:
+            dd_text = dd.text.strip()
+            if dd_text:  # Kiểm tra xem phần tử dd có chứa text hay không
                 if dd.find_elements(By.TAG_NAME, 'strong'):
-                    result += f"\\n\\t{dd.text.strip()}"
+                    result += f"\\n\\t{dd_text.rstrip()}"  # Loại bỏ khoảng trắng trước \n
                 else:
-                    result += f"\\n{dd.text.strip()}"
+                    result += f"\\n{dd_text.rstrip()}"  # Loại bỏ khoảng trắng trước \n
 
-            logging.info(f"Lấy được từ {main_word} trong Trang {self.current_page}!")
+        logging.info(f"Lấy được từ {main_word} trong Trang {self.current_page}!")
 
-            return result
-        except NoSuchElementException as e:
-            logging.error(f"Không tìm thấy phần tử khi xử lý từ: {e}\nDữ liệu từ: {word.text}")
-            return ""
-        except Exception as e:
-            logging.error(f"Lỗi khi phân tích từ: {e}\nDữ liệu từ: {word.text}")
-            return ""
+        return result.strip()  # Loại bỏ khoảng trắng thừa ở đầu và cuối chuỗi
+    except NoSuchElementException as e:
+        logging.error(f"Không tìm thấy phần tử khi xử lý từ: {e}\nDữ liệu từ: {word.text}")
+        return ""
+    except Exception as e:
+        logging.error(f"Lỗi khi phân tích từ: {e}\nDữ liệu từ: {word.text}")
+        return ""
 
     def save_data(self, data, page):
         try:
