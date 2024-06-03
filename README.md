@@ -50,22 +50,22 @@ Trang [số trang], kết quả [kết quả đầu]~[kết quả cuối]
   - `[kết quả đầu]` được tính bằng `([số trang] - 1) * 10 + 1`.
   - `[kết quả cuối]` được tính bằng `[số trang] * 10`.
 
-## Cài Đặt
+## Cài đặt
 
-### Yêu Cầu
+### Yêu cầu
 
 - Microsoft Edge `125.0.2535.51` hoặc mới hơn/Chrome `125.0.6422.78` hoặc mới hơn
 - Webdriver Edge `125.0.2535.51` Win64 hoặc mới hơn/Chrome `125.0.6422.78` hoặc mới hơn
 - Selenium `4.21.0` hoặc mới hơn
 - Python `3.11` hoặc mới hơn
 
-#### Bước 1: Cài Đặt Microsoft Edge hoặc Chrome và Webdriver
+#### Bước 1: Cài đặt Microsoft Edge hoặc Chrome và Webdriver
 
 Đảm bảo bạn đã cài đặt Microsoft Edge phiên bản 125.0.2535.51 hoặc mới hơn. Sau đó, tải về và cài đặt Webdriver Edge phiên bản 125.0.2535.51 Win64 hoặc mới hơn từ trang web chính thức của Microsoft Edge Developer.
 
 Nếu dùng Chrome, đảm bảo bạn đã cài đặt Chrome phiên bản 125.0.6422.78 hoặc mới hơn. Sau đó, tải về và cài đặt Webdriver Chrome phiên bản 125.0.6422.78 Win64 hoặc mới hơn từ trang web chính thức của Chrome for Testing.
 
-#### Bước 2: Cài Đặt Selenium
+#### Bước 2: Cài đặt Selenium
 
 Sử dụng pip để cài đặt thư viện Selenium:
 
@@ -73,11 +73,11 @@ Sử dụng pip để cài đặt thư viện Selenium:
 pip install selenium==4.21.0
 ```
 
-#### Bước 3: Tải Về Mã Nguồn
+#### Bước 3: Tải về mã nguồn
 
 Tải về mã nguồn từ kho lưu trữ GitHub bằng cách sử dụng lệnh git clone hoặc tải dưới dạng tệp ZIP.
 
-#### Bước 4: Chạy Mã
+#### Bước 4: Chạy mã
 
 Chạy chương trình bằng cách chạy tệp `main.py`:
 
@@ -91,7 +91,7 @@ Chạy tệp `main_chrome.py` nếu dùng Chrome:
 python krdict_scraper_chrome.py
 ```
 
-## Sử Dụng
+## Sử dụng
 
 Khi chạy, chương trình sẽ tự động lấy dữ liệu từ trang KrDict và lưu vào tệp văn bản theo định dạng đã được chỉ định trong mã nguồn.
 
