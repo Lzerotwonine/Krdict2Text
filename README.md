@@ -76,13 +76,13 @@ Tải về mã nguồn từ kho lưu trữ GitHub bằng cách sử dụng lện
 Chạy chương trình bằng cách chạy tệp `main.py`:
 
 ```bash
-python main.py
+python krdict_scraper.py
 ```
 
 Chạy tệp `main_chrome.py` nếu dùng Chrome:
 
 ```bash
-python main_chrome.py
+python krdict_scraper_chrome.py
 ```
 
 ## Sử Dụng
