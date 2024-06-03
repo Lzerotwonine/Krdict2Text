@@ -1,4 +1,4 @@
-#Krdict2Text
+# Krdict2Text
 
 Là dự án gồm 2 chương trình dùng để thực hiện cùng một công việc lấy văn bản từ trang web [KrDict](https://krdict.korean.go.kr/m/vie) với hai phương thức khác nhau nhưng cùng lưu một cấu trúc.
 - KrdictScraper sẽ lấy dữ liệu từ trang web của Từ điển học tiếng Hàn-tiếng Việt của Viện Quốc ngữ Quốc gia và lưu vào tệp text.
