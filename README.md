@@ -4,15 +4,15 @@ Là dự án gồm 2 chương trình dùng để thực hiện cùng một công
 - KrdictScraper sẽ lấy dữ liệu từ trang web của Từ điển học tiếng Hàn-tiếng Việt của Viện Quốc ngữ Quốc gia và lưu vào tệp text.
 - Xml2text sẽ lấy dữ liệu từ file từ điển định dạng XML của Từ điển học tiếng Hàn-tiếng Việt của Viện Quốc ngữ Quốc gia và lưu vào tệp text.
 
-## KrdictScraper
+# KrdictScraper
 
 KrDictScraper là một công cụ tự động để lấy dữ liệu từ trang web [KrDict](https://krdict.korean.go.kr/m/vie) (Korea-Vietnam Dictionary) và lưu vào một tệp văn bản để sử dụng sau này. Công cụ này được viết bằng Python và sử dụng thư viện Selenium để tự động duyệt web.
 
-### Thời gian phát triển
+## Thời gian phát triển
 - Bắt đầu từ 22/05/2024
 - Hoàn thiện vào 25/05/2024
 
-### Cấu trúc lưu dữ liệu
+## Cấu trúc lưu dữ liệu
 Có thể xem dữ liệu mẫu ở đây: [data_sample](data_sample)
 
 Ví dụ
@@ -28,7 +28,7 @@ Giải thích cách trình bày từ một nghĩa và từ nhiều nghĩa:
   - `[\n]` thể hiện xuống dòng.
   - `[\t]` thể hiện đánh số cho từng loại nghĩa.
 
-### Cấu trúc lưu tiến trình
+## Cấu trúc lưu tiến trình
 
 ```
 Trang [số trang], kết quả [kết quả đầu]~[kết quả cuối]
@@ -50,22 +50,22 @@ Trang [số trang], kết quả [kết quả đầu]~[kết quả cuối]
   - `[kết quả đầu]` được tính bằng `([số trang] - 1) * 10 + 1`.
   - `[kết quả cuối]` được tính bằng `[số trang] * 10`.
 
-### Cài Đặt
+## Cài Đặt
 
-#### Yêu Cầu
+### Yêu Cầu
 
 - Microsoft Edge `125.0.2535.51` hoặc mới hơn/Chrome `125.0.6422.78` hoặc mới hơn
 - Webdriver Edge `125.0.2535.51` Win64 hoặc mới hơn/Chrome `125.0.6422.78` hoặc mới hơn
 - Selenium `4.21.0` hoặc mới hơn
 - Python `3.11` hoặc mới hơn
 
-###### Bước 1: Cài Đặt Microsoft Edge hoặc Chrome và Webdriver
+#### Bước 1: Cài Đặt Microsoft Edge hoặc Chrome và Webdriver
 
 Đảm bảo bạn đã cài đặt Microsoft Edge phiên bản 125.0.2535.51 hoặc mới hơn. Sau đó, tải về và cài đặt Webdriver Edge phiên bản 125.0.2535.51 Win64 hoặc mới hơn từ trang web chính thức của Microsoft Edge Developer.
 
 Nếu dùng Chrome, đảm bảo bạn đã cài đặt Chrome phiên bản 125.0.6422.78 hoặc mới hơn. Sau đó, tải về và cài đặt Webdriver Chrome phiên bản 125.0.6422.78 Win64 hoặc mới hơn từ trang web chính thức của Chrome for Testing.
 
-###### Bước 2: Cài Đặt Selenium
+#### Bước 2: Cài Đặt Selenium
 
 Sử dụng pip để cài đặt thư viện Selenium:
 
@@ -73,11 +73,11 @@ Sử dụng pip để cài đặt thư viện Selenium:
 pip install selenium==4.21.0
 ```
 
-###### Bước 3: Tải Về Mã Nguồn
+#### Bước 3: Tải Về Mã Nguồn
 
 Tải về mã nguồn từ kho lưu trữ GitHub bằng cách sử dụng lệnh git clone hoặc tải dưới dạng tệp ZIP.
 
-###### Bước 4: Chạy Mã
+#### Bước 4: Chạy Mã
 
 Chạy chương trình bằng cách chạy tệp `main.py`:
 
@@ -91,15 +91,15 @@ Chạy tệp `main_chrome.py` nếu dùng Chrome:
 python krdict_scraper_chrome.py
 ```
 
-### Sử Dụng
+## Sử Dụng
 
 Khi chạy, chương trình sẽ tự động lấy dữ liệu từ trang KrDict và lưu vào tệp văn bản theo định dạng đã được chỉ định trong mã nguồn.
 
-## Xml2text
+# Xml2text
 
 Chương trình này là một công cụ tự động để phân tích và biên soạn dữ liệu từ điển từ các tệp XML được cung cấp. Nó có khả năng trích xuất thông tin từ các tệp XML chứa dữ liệu từ điển và tự động tạo ra một tệp văn bản chứa thông tin từ điển được biên soạn.
 
-### Cài đặt
+## Cài đặt
 1. Đảm bảo bạn đã cài đặt Python trên máy tính của mình.
 2. Tải mã nguồn của chương trình từ [repository](link-to-repo).
 3. Mở terminal/command prompt và di chuyển đến thư mục chứa mã nguồn của chương trình.
@@ -112,9 +112,9 @@ Chương trình này là một công cụ tự động để phân tích và bi�
    python xml2text.py
    ```
 
-### Cấu trúc dữ liệu và Giải thích
+## Cấu trúc dữ liệu và Giải thích
 
-#### Biến và Cấu trúc Dữ liệu
+### Biến và Cấu trúc Dữ liệu
 
 - `base_folder`: Đường dẫn tới thư mục gốc của dự án. Nó được lấy từ biến môi trường hoặc thư mục chứa tệp mã nguồn.
 - `xml_folder`: Đường dẫn tới tệp XML chứa dữ liệu từ điển. Nó được xác định bằng cách kết hợp `base_folder` với thư mục chứa dữ liệu XML.
@@ -122,7 +122,7 @@ Chương trình này là một công cụ tự động để phân tích và bi�
 - `pos_mapping`: Một từ điển ánh xạ từ loại từ tiếng Hàn sang tiếng Việt. Nó dùng để chuyển đổi các loại từ tiếng Hàn sang tiếng Việt trong kết quả đầu ra.
 - `vocabulary_level_mapping`: Một từ điển ánh xạ từ cấp độ từ vựng tiếng Hàn sang các dấu sao. Nó dùng để đánh giá cấp độ từ vựng của các mục từ điển.
 
-#### Ý nghĩa các biến
+### Ý nghĩa các biến
 
 - `parse_lexical_entry`: Hàm này nhận một mục `LexicalEntry` từ tệp XML và phân tích thông tin từ điển từ nó.
 - `tree`: Biến này đại diện cho cấu trúc cây của tệp XML.
@@ -130,7 +130,7 @@ Chương trình này là một công cụ tự động để phân tích và bi�
 - `entries_by_val`: Một từ điển dùng để lưu trữ các mục từ điển theo giá trị `val`. Mỗi khóa là một giá trị `val`, và mỗi giá trị là một danh sách các mục từ điển có cùng giá trị `val`.
 - `f`: Tệp văn bản đầu ra được mở để ghi thông tin từ điển biên soạn.
 
-#### Kết quả mẫu
+### Kết quả mẫu
 
 Mỗi dòng trong tệp văn bản đầu ra biểu diễn một mục từ điển và thông tin của nó. Dưới đây là một cấu trúc mẫu của một dòng và ý nghĩa của các phần tử trong dòng:
 
@@ -155,7 +155,7 @@ Mỗi dòng trong tệp văn bản đầu ra biểu diễn một mục từ đi�
 - `* [Ví dụ]`: Danh sách các ví dụ minh họa cho mục từ điển.
 - `Đa truyền thông [Số lượng] [Nhãn]`: Thông tin về các tệp đa truyền thông liên quan đến mục từ điển.
 
-#### Giải thích các thuộc tính
+### Giải thích các thuộc tính
 
 - `Loại từ`: Loại từ của mục từ điển, ví dụ: Danh từ, Động từ.
 - `Từ viết`: Từ viết của mục từ điển.
