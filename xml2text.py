@@ -1,14 +1,23 @@
 import os
 import xml.etree.ElementTree as ET
 
-# Đường dẫn tệp và thư mục đầu ra
+# # Đường dẫn tệp và thư mục đầu ra
+# base_folder = os.environ.get('KRDICT_BASE_FOLDER', os.path.abspath(os.path.dirname(__file__)))
+# xml_folder = os.path.join(base_folder, "data", "xml_20240601", "1_5000_20240601.xml")
+# output_path = os.path.join(base_folder, "data", "result.txt")
+#
+# # Kiểm tra sự tồn tại của tệp
+# if not os.path.exists(xml_folder):
+#     raise FileNotFoundError(f"Tệp không tồn tại: {xml_folder}")
+
+# Đường dẫn thư mục chứa các tệp XML và tệp đầu ra
 base_folder = os.environ.get('KRDICT_BASE_FOLDER', os.path.abspath(os.path.dirname(__file__)))
-xml_folder = os.path.join(base_folder, "data", "xml_20240601", "1_5000_20240601.xml")
+xml_folder = os.path.join(base_folder, "data", "xml_20240601")
 output_path = os.path.join(base_folder, "data", "result.txt")
 
-# Kiểm tra sự tồn tại của tệp
+# Kiểm tra sự tồn tại của thư mục
 if not os.path.exists(xml_folder):
-    raise FileNotFoundError(f"Tệp không tồn tại: {xml_folder}")
+    raise FileNotFoundError(f"Thư mục không tồn tại: {xml_folder}")
 
 # Từ loại tiếng Việt
 pos_mapping = {
@@ -189,14 +198,41 @@ def parse_lexical_entry(lexical_entry):
 
     return '\n'.join(result)
 
-# Đọc và phân tích tệp XML
-tree = ET.parse(xml_folder)
-root = tree.getroot()
+# # Đọc và phân tích tệp XML
+# tree = ET.parse(xml_folder)
+# root = tree.getroot()
+#
+# # Tạo cấu trúc từ điển để lưu trữ các LexicalEntry cùng giá trị val
+# entries_by_val = defaultdict(list)
+# for lexical_entry in root.findall(".//LexicalEntry"):
+#     val = lexical_entry.get('val')
+#     entries_by_val[val].append(lexical_entry)
 
-# Duyệt qua từng LexicalEntry và ghi kết quả vào tệp
+# Lấy danh sách tất cả các tệp XML trong thư mục
+xml_files = [os.path.join(xml_folder, file) for file in os.listdir(xml_folder) if file.endswith('.xml')]
+
+# Duyệt qua tất cả các tệp XML và ghi kết quả vào tệp
 with open(output_path, 'w', encoding='utf-8') as f:
-    for lexical_entry in root.findall(".//LexicalEntry"):
-        entry_data = parse_lexical_entry(lexical_entry)
-        f.write(entry_data + '\n')
+    for xml_file in xml_files:
+        tree = ET.parse(xml_file)
+        root = tree.getroot()
+
+        # Tạo cấu trúc từ điển để lưu trữ các LexicalEntry cùng giá trị val
+        entries_by_val = defaultdict(list)
+        for lexical_entry in root.findall(".//LexicalEntry"):
+            val = lexical_entry.get('val')
+            entries_by_val[val].append(lexical_entry)
+
+        # Duyệt qua từng nhóm LexicalEntry và ghi kết quả vào tệp
+        for val, lexical_entries in entries_by_val.items():
+            primary_entry = lexical_entries[0]
+            primary_entry_data = parse_lexical_entry(primary_entry)
+            f.write(primary_entry_data + '\n')
+
+            if len(lexical_entries) > 1:
+                f.write(f"\nTục ngữ - quán ngữ {len(lexical_entries) - 1}\n")
+                for secondary_entry in lexical_entries[1:]:
+                    secondary_entry_data = parse_lexical_entry(secondary_entry, is_idiom=True)
+                    f.write(f"\t{secondary_entry_data}\n")
 
 print(f"Kết quả đã được lưu vào {output_path}")
