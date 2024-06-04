@@ -233,6 +233,6 @@ with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(f"\nTục ngữ - quán ngữ {len(lexical_entries) - 1}\n")
                 for secondary_entry in lexical_entries[1:]:
                     secondary_entry_data = parse_lexical_entry(secondary_entry, is_idiom=True)
-                    f.write(f"\t{secondary_entry_data}\n")
+                    f.write(f"{secondary_entry_data}\n")
 
 print(f"Kết quả đã được lưu vào {output_path}")
