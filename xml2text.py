@@ -148,15 +148,6 @@ def parse_lexical_entry(lexical_entry):
             example_text = example.find("feat[@att='example']").get('val', '') if example.find("feat[@att='example']") is not None else ''
             result.append(f"\t* {example_text}")
 
-        # Xử lý Multimedia
-        multimedia_elements = sense.findall("Multimedia")
-        multimedia_data = []
-        for i, multimedia in enumerate(multimedia_elements, start=1):
-            label = multimedia.find("feat[@att='label']").get('val', '')
-            multimedia_data.append(label)
-        if multimedia_data:
-            result.append(f"\nĐa truyền thông {len(multimedia_data)}\n" + "\t".join(multimedia_data))
-
         # Xử lý syntacticPattern
         syntactic_patterns = sense.findall("feat[@att='syntacticPattern']")
         if syntactic_patterns:
@@ -195,6 +186,15 @@ def parse_lexical_entry(lexical_entry):
         if annotation is not None:
             annotation_text = annotation.get('val', '')
             result.append(f"\t* Tham khảo {annotation_text}")
+
+        # Xử lý Multimedia
+        multimedia_elements = sense.findall("Multimedia")
+        multimedia_data = []
+        for i, multimedia in enumerate(multimedia_elements, start=1):
+            label = multimedia.find("feat[@att='label']").get('val', '')
+            multimedia_data.append(label)
+        if multimedia_data:
+            result.append(f"Đa truyền thông {len(multimedia_data)}\n" + "\t".join(multimedia_data))
 
     return '\n'.join(result)
 
