@@ -100,8 +100,8 @@ Khi chạy, chương trình sẽ tự động lấy dữ liệu từ trang KrDic
 Chương trình này là một công cụ tự động để phân tích và biên soạn dữ liệu từ điển từ các tệp XML được cung cấp. Nó có khả năng trích xuất thông tin từ các tệp XML chứa dữ liệu từ điển và tự động tạo ra một tệp văn bản chứa thông tin từ điển được biên soạn.
 
 ## Cài đặt
-1. Đảm bảo bạn đã cài đặt Python trên máy tính của mình.
-2. Tải mã nguồn của chương trình từ [repository](link-to-repo).
+1. Đảm bảo bạn đã cài đặt Python `3.11` hoặc mới hơn trên máy tính của mình.
+2. Tải về mã nguồn từ kho lưu trữ GitHub bằng cách sử dụng lệnh git clone hoặc tải dưới dạng tệp ZIP.
 3. Mở terminal/command prompt và di chuyển đến thư mục chứa mã nguồn của chương trình.
 4. Chạy lệnh sau để cài đặt các thư viện cần thiết:
    ```
