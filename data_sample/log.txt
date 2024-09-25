@@ -1,91 +1,171 @@
-2024-05-25 08:34:31,687 - Không tìm thấy file tiến trình. Tạo file mới.
-2024-05-25 08:34:31,687 - Tiếp tục lấy dữ liệu từ trang 1...
-2024-05-25 08:34:37,045 - Lấy được từ 가 trong Trang 0!
-2024-05-25 08:34:37,154 - Lấy được từ -가 trong Trang 0!
-2024-05-25 08:34:37,261 - Lấy được từ 가- trong Trang 0!
-2024-05-25 08:34:37,429 - Lấy được từ 가 trong Trang 0!
-2024-05-25 08:34:37,627 - Lấy được từ -가 trong Trang 0!
-2024-05-25 08:34:37,669 - Không tìm thấy phần tử: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span.word_att_type1"}
-  (Session info: MicrosoftEdge=125.0.2535.51); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF678175FE2+61250]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF678100639+207017]
-	(No symbol) [0x00007FF677F0E3C7]
-	(No symbol) [0x00007FF677F551F3]
-	(No symbol) [0x00007FF677F552B6]
-	(No symbol) [0x00007FF677F4AA4C]
-	(No symbol) [0x00007FF677F7488F]
-	(No symbol) [0x00007FF677F4A9F7]
-	(No symbol) [0x00007FF677F4A8BD]
-	(No symbol) [0x00007FF677F74B30]
-	(No symbol) [0x00007FF677F4A9F7]
-	(No symbol) [0x00007FF677F8DE07]
-	(No symbol) [0x00007FF677F744B3]
-	(No symbol) [0x00007FF677F49F1E]
-	(No symbol) [0x00007FF677F490DC]
-	(No symbol) [0x00007FF677F49AD1]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF67832E174+1072532]
-	(No symbol) [0x00007FF677FC2CEC]
-	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF67806EE9C+51468]
-	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF678063755+4549]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF67832D135+1068373]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF67810A041+246449]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6781053A4+226836]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6781054DB+227147]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6780FBCD0+188224]
-	BaseThreadInitThunk [0x00007FFC1C45257D+29]
-	RtlUserThreadStart [0x00007FFC1DEAAA48+40]
-
-2024-05-25 08:34:37,825 - Lấy được từ 가 trong Trang 0!
-2024-05-25 08:34:37,925 - Lấy được từ -가 trong Trang 0!
-2024-05-25 08:34:37,962 - Không tìm thấy phần tử: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span.word_att_type1"}
-  (Session info: MicrosoftEdge=125.0.2535.51); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF678175FE2+61250]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF678100639+207017]
-	(No symbol) [0x00007FF677F0E3C7]
-	(No symbol) [0x00007FF677F551F3]
-	(No symbol) [0x00007FF677F552B6]
-	(No symbol) [0x00007FF677F4AA4C]
-	(No symbol) [0x00007FF677F7488F]
-	(No symbol) [0x00007FF677F4A9F7]
-	(No symbol) [0x00007FF677F4A8BD]
-	(No symbol) [0x00007FF677F74B30]
-	(No symbol) [0x00007FF677F4A9F7]
-	(No symbol) [0x00007FF677F8DE07]
-	(No symbol) [0x00007FF677F744B3]
-	(No symbol) [0x00007FF677F49F1E]
-	(No symbol) [0x00007FF677F490DC]
-	(No symbol) [0x00007FF677F49AD1]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF67832E174+1072532]
-	(No symbol) [0x00007FF677FC2CEC]
-	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF67806EE9C+51468]
-	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF678063755+4549]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF67832D135+1068373]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF67810A041+246449]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6781053A4+226836]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6781054DB+227147]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6780FBCD0+188224]
-	BaseThreadInitThunk [0x00007FFC1C45257D+29]
-	RtlUserThreadStart [0x00007FFC1DEAAA48+40]
-
-2024-05-25 08:34:38,062 - Lấy được từ -가 trong Trang 0!
-2024-05-25 08:34:38,062 - Lưu từ 가 1 trong trang 1!
-2024-05-25 08:34:38 - Lưu từ 가 1 trong trang 1!
-2024-05-25 08:34:38,063 - Lưu từ -가 1 trong trang 1!
-2024-05-25 08:34:38 - Lưu từ -가 1 trong trang 1!
-2024-05-25 08:34:38,063 - Lưu từ 가- 1 trong trang 1!
-2024-05-25 08:34:38 - Lưu từ 가- 1 trong trang 1!
-2024-05-25 08:34:38,063 - Lưu từ 가 2 trong trang 1!
-2024-05-25 08:34:38 - Lưu từ 가 2 trong trang 1!
-2024-05-25 08:34:38,063 - Lưu từ -가 2 trong trang 1!
-2024-05-25 08:34:38 - Lưu từ -가 2 trong trang 1!
-2024-05-25 08:34:38,063 - Lưu từ 가 3 trong trang 1!
-2024-05-25 08:34:38 - Lưu từ 가 3 trong trang 1!
-2024-05-25 08:34:38,063 - Lưu từ -가 3 trong trang 1!
-2024-05-25 08:34:38 - Lưu từ -가 3 trong trang 1!
-2024-05-25 08:34:38,064 - Lưu từ -가 4 trong trang 1!
-2024-05-25 08:34:38 - Lưu từ -가 4 trong trang 1!
-2024-05-25 08:34:38,064 - Đã lấy dữ liệu từ trang 1 trong 6.38 giây
-2024-05-25 08:34:38 - Đã lấy dữ liệu từ trang 1 trong 6.38 giây
-2024-05-25 08:34:38,064 - Tổng từ đã lấy trong Trang 1 là 8!
+2024-05-28 09:23:20,063 - Không tìm thấy file tiến trình. Tạo file mới.
+2024-05-28 09:23:20,063 - Tiếp tục lấy dữ liệu từ trang 1...
+2024-05-28 09:23:25,205 - Lấy được từ 가 trong Trang 0!
+2024-05-28 09:23:25,305 - Lấy được từ -가 trong Trang 0!
+2024-05-28 09:23:25,396 - Lấy được từ 가- trong Trang 0!
+2024-05-28 09:23:25,551 - Lấy được từ 가 trong Trang 0!
+2024-05-28 09:23:25,736 - Lấy được từ -가 trong Trang 0!
+2024-05-28 09:23:25,809 - Lấy được từ 가- trong Trang 0!
+2024-05-28 09:23:25,958 - Lấy được từ 가 trong Trang 0!
+2024-05-28 09:23:26,058 - Lấy được từ -가 trong Trang 0!
+2024-05-28 09:23:26,132 - Lấy được từ 가- trong Trang 0!
+2024-05-28 09:23:26,225 - Lấy được từ -가 trong Trang 0!
+2024-05-28 09:23:26,226 - Lưu từ 가 1 trong trang 1!
+2024-05-28 09:23:26 - Lưu từ 가 1 trong trang 1!
+2024-05-28 09:23:26,226 - Lưu từ -가 1 trong trang 1!
+2024-05-28 09:23:26 - Lưu từ -가 1 trong trang 1!
+2024-05-28 09:23:26,227 - Lưu từ 가- 1 trong trang 1!
+2024-05-28 09:23:26 - Lưu từ 가- 1 trong trang 1!
+2024-05-28 09:23:26,227 - Lưu từ 가 2 trong trang 1!
+2024-05-28 09:23:26 - Lưu từ 가 2 trong trang 1!
+2024-05-28 09:23:26,227 - Lưu từ -가 2 trong trang 1!
+2024-05-28 09:23:26 - Lưu từ -가 2 trong trang 1!
+2024-05-28 09:23:26,227 - Lưu từ 가- 2 trong trang 1!
+2024-05-28 09:23:26 - Lưu từ 가- 2 trong trang 1!
+2024-05-28 09:23:26,227 - Lưu từ 가 3 trong trang 1!
+2024-05-28 09:23:26 - Lưu từ 가 3 trong trang 1!
+2024-05-28 09:23:26,227 - Lưu từ -가 3 trong trang 1!
+2024-05-28 09:23:26 - Lưu từ -가 3 trong trang 1!
+2024-05-28 09:23:26,228 - Lưu từ 가- 3 trong trang 1!
+2024-05-28 09:23:26 - Lưu từ 가- 3 trong trang 1!
+2024-05-28 09:23:26,228 - Lưu từ -가 4 trong trang 1!
+2024-05-28 09:23:26 - Lưu từ -가 4 trong trang 1!
+2024-05-28 09:23:26,228 - Đã lấy dữ liệu từ trang 1 trong 6.16 giây
+2024-05-28 09:23:26 - Đã lấy dữ liệu từ trang 1 trong 6.16 giây
+2024-05-28 09:23:26,228 - Tổng từ đã lấy trong Trang 1 là 10!
+2024-05-28 09:23:36,624 - Tiếp tục lấy dữ liệu từ trang 2...
+2024-05-28 09:23:38,275 - Lấy được từ -가 trong Trang 1!
+2024-05-28 09:23:38,372 - Lấy được từ -가 trong Trang 1!
+2024-05-28 09:23:38,469 - Lấy được từ 가가호호 trong Trang 1!
+2024-05-28 09:23:38,565 - Lấy được từ 가가호호 trong Trang 1!
+2024-05-28 09:23:38,660 - Lấy được từ 가감 trong Trang 1!
+2024-05-28 09:23:38,750 - Lấy được từ 가감승제 trong Trang 1!
+2024-05-28 09:23:38,843 - Lấy được từ 가감하다 trong Trang 1!
+2024-05-28 09:23:38,930 - Lấy được từ 가객 trong Trang 1!
+2024-05-28 09:23:39,021 - Lấy được từ 가건물 trong Trang 1!
+2024-05-28 09:23:39,099 - Lấy được từ 가게 trong Trang 1!
+2024-05-28 09:23:39,100 - Lưu từ -가 5 trong trang 2!
+2024-05-28 09:23:39 - Lưu từ -가 5 trong trang 2!
+2024-05-28 09:23:39,100 - Lưu từ -가 6 trong trang 2!
+2024-05-28 09:23:39 - Lưu từ -가 6 trong trang 2!
+2024-05-28 09:23:39,100 - Lưu từ 가가호호 1 trong trang 2!
+2024-05-28 09:23:39 - Lưu từ 가가호호 1 trong trang 2!
+2024-05-28 09:23:39,100 - Lưu từ 가가호호 2 trong trang 2!
+2024-05-28 09:23:39 - Lưu từ 가가호호 2 trong trang 2!
+2024-05-28 09:23:39,100 - Lưu từ 가감 trong trang 2!
+2024-05-28 09:23:39 - Lưu từ 가감 trong trang 2!
+2024-05-28 09:23:39,101 - Lưu từ 가감승제 trong trang 2!
+2024-05-28 09:23:39 - Lưu từ 가감승제 trong trang 2!
+2024-05-28 09:23:39,101 - Lưu từ 가감하다 trong trang 2!
+2024-05-28 09:23:39 - Lưu từ 가감하다 trong trang 2!
+2024-05-28 09:23:39,101 - Lưu từ 가객 trong trang 2!
+2024-05-28 09:23:39 - Lưu từ 가객 trong trang 2!
+2024-05-28 09:23:39,101 - Lưu từ 가건물 trong trang 2!
+2024-05-28 09:23:39 - Lưu từ 가건물 trong trang 2!
+2024-05-28 09:23:39,101 - Lưu từ 가게 trong trang 2!
+2024-05-28 09:23:39 - Lưu từ 가게 trong trang 2!
+2024-05-28 09:23:39,101 - Đã lấy dữ liệu từ trang 2 trong 2.48 giây
+2024-05-28 09:23:39 - Đã lấy dữ liệu từ trang 2 trong 2.48 giây
+2024-05-28 09:23:39,101 - Tổng từ đã lấy trong Trang 2 là 10!
+2024-05-28 09:23:50,764 - Tiếp tục lấy dữ liệu từ trang 3...
+2024-05-28 09:23:51,840 - Lấy được từ 가겟집 trong Trang 2!
+2024-05-28 09:23:51,952 - Lấy được từ 가격 trong Trang 2!
+2024-05-28 09:23:52,052 - Lấy được từ 가격 trong Trang 2!
+2024-05-28 09:23:52,138 - Lấy được từ 가격 인상 trong Trang 2!
+2024-05-28 09:23:52,225 - Lấy được từ 가격 인하 trong Trang 2!
+2024-05-28 09:23:52,314 - Lấy được từ 가격 파괴 trong Trang 2!
+2024-05-28 09:23:52,440 - Lấy được từ 가격표 trong Trang 2!
+2024-05-28 09:23:52,528 - Lấy được từ 가격하다 trong Trang 2!
+2024-05-28 09:23:52,614 - Lấy được từ 가결 trong Trang 2!
+2024-05-28 09:23:52,706 - Lấy được từ 가결되다 trong Trang 2!
+2024-05-28 09:23:52,706 - Lưu từ 가겟집 trong trang 3!
+2024-05-28 09:23:52 - Lưu từ 가겟집 trong trang 3!
+2024-05-28 09:23:52,706 - Lưu từ 가격 1 trong trang 3!
+2024-05-28 09:23:52 - Lưu từ 가격 1 trong trang 3!
+2024-05-28 09:23:52,706 - Lưu từ 가격 2 trong trang 3!
+2024-05-28 09:23:52 - Lưu từ 가격 2 trong trang 3!
+2024-05-28 09:23:52,706 - Lưu từ 가격 인상 trong trang 3!
+2024-05-28 09:23:52 - Lưu từ 가격 인상 trong trang 3!
+2024-05-28 09:23:52,707 - Lưu từ 가격 인하 trong trang 3!
+2024-05-28 09:23:52 - Lưu từ 가격 인하 trong trang 3!
+2024-05-28 09:23:52,707 - Lưu từ 가격 파괴 trong trang 3!
+2024-05-28 09:23:52 - Lưu từ 가격 파괴 trong trang 3!
+2024-05-28 09:23:52,707 - Lưu từ 가격표 trong trang 3!
+2024-05-28 09:23:52 - Lưu từ 가격표 trong trang 3!
+2024-05-28 09:23:52,707 - Lưu từ 가격하다 trong trang 3!
+2024-05-28 09:23:52 - Lưu từ 가격하다 trong trang 3!
+2024-05-28 09:23:52,707 - Lưu từ 가결 trong trang 3!
+2024-05-28 09:23:52 - Lưu từ 가결 trong trang 3!
+2024-05-28 09:23:52,707 - Lưu từ 가결되다 trong trang 3!
+2024-05-28 09:23:52 - Lưu từ 가결되다 trong trang 3!
+2024-05-28 09:23:52,707 - Đã lấy dữ liệu từ trang 3 trong 1.94 giây
+2024-05-28 09:23:52 - Đã lấy dữ liệu từ trang 3 trong 1.94 giây
+2024-05-28 09:23:52,707 - Tổng từ đã lấy trong Trang 3 là 10!
+2024-05-28 09:29:09,269 - Tiếp tục lấy dữ liệu từ trang 4...
+2024-05-28 09:29:14,257 - Lấy được từ 가결하다 trong Trang 3!
+2024-05-28 09:29:14,363 - Lấy được từ 가계 trong Trang 3!
+2024-05-28 09:29:14,536 - Lấy được từ 가계 trong Trang 3!
+2024-05-28 09:29:14,632 - Lấy được từ 가계부 trong Trang 3!
+2024-05-28 09:29:14,731 - Lấy được từ 가계비 trong Trang 3!
+2024-05-28 09:29:14,819 - Lấy được từ 가계 소득 trong Trang 3!
+2024-05-28 09:29:14,927 - Lấy được từ 가계약 trong Trang 3!
+2024-05-28 09:29:15,060 - Lấy được từ 가곡 trong Trang 3!
+2024-05-28 09:29:15,163 - Lấy được từ 가곡집 trong Trang 3!
+2024-05-28 09:29:15,267 - Lấy được từ 가공 trong Trang 3!
+2024-05-28 09:29:15,267 - Lưu từ 가결하다 trong trang 4!
+2024-05-28 09:29:15 - Lưu từ 가결하다 trong trang 4!
+2024-05-28 09:29:15,267 - Lưu từ 가계 1 trong trang 4!
+2024-05-28 09:29:15 - Lưu từ 가계 1 trong trang 4!
+2024-05-28 09:29:15,267 - Lưu từ 가계 2 trong trang 4!
+2024-05-28 09:29:15 - Lưu từ 가계 2 trong trang 4!
+2024-05-28 09:29:15,267 - Lưu từ 가계부 trong trang 4!
+2024-05-28 09:29:15 - Lưu từ 가계부 trong trang 4!
+2024-05-28 09:29:15,267 - Lưu từ 가계비 trong trang 4!
+2024-05-28 09:29:15 - Lưu từ 가계비 trong trang 4!
+2024-05-28 09:29:15,269 - Lưu từ 가계 소득 trong trang 4!
+2024-05-28 09:29:15 - Lưu từ 가계 소득 trong trang 4!
+2024-05-28 09:29:15,269 - Lưu từ 가계약 trong trang 4!
+2024-05-28 09:29:15 - Lưu từ 가계약 trong trang 4!
+2024-05-28 09:29:15,269 - Lưu từ 가곡 trong trang 4!
+2024-05-28 09:29:15 - Lưu từ 가곡 trong trang 4!
+2024-05-28 09:29:15,269 - Lưu từ 가곡집 trong trang 4!
+2024-05-28 09:29:15 - Lưu từ 가곡집 trong trang 4!
+2024-05-28 09:29:15,269 - Lưu từ 가공 1 trong trang 4!
+2024-05-28 09:29:15 - Lưu từ 가공 1 trong trang 4!
+2024-05-28 09:29:15,269 - Đã lấy dữ liệu từ trang 4 trong 6.00 giây
+2024-05-28 09:29:15 - Đã lấy dữ liệu từ trang 4 trong 6.00 giây
+2024-05-28 09:29:15,269 - Tổng từ đã lấy trong Trang 4 là 10!
+2024-05-28 09:29:34,605 - Tiếp tục lấy dữ liệu từ trang 5...
+2024-05-28 09:29:36,374 - Lấy được từ 가공 trong Trang 4!
+2024-05-28 09:29:36,489 - Lấy được từ 가공되다 trong Trang 4!
+2024-05-28 09:29:36,596 - Lấy được từ 가공법 trong Trang 4!
+2024-05-28 09:29:36,709 - Lấy được từ 가공성 trong Trang 4!
+2024-05-28 09:29:36,829 - Lấy được từ 가공식품 trong Trang 4!
+2024-05-28 09:29:36,936 - Lấy được từ 가공업 trong Trang 4!
+2024-05-28 09:29:37,039 - Lấy được từ 가공인물 trong Trang 4!
+2024-05-28 09:29:37,141 - Lấy được từ 가공적 trong Trang 4!
+2024-05-28 09:29:37,302 - Lấy được từ 가공적 trong Trang 4!
+2024-05-28 09:29:37,492 - Lấy được từ 가공품 trong Trang 4!
+2024-05-28 09:29:37,493 - Lưu từ 가공 2 trong trang 5!
+2024-05-28 09:29:37 - Lưu từ 가공 2 trong trang 5!
+2024-05-28 09:29:37,493 - Lưu từ 가공되다 trong trang 5!
+2024-05-28 09:29:37 - Lưu từ 가공되다 trong trang 5!
+2024-05-28 09:29:37,493 - Lưu từ 가공법 trong trang 5!
+2024-05-28 09:29:37 - Lưu từ 가공법 trong trang 5!
+2024-05-28 09:29:37,494 - Lưu từ 가공성 trong trang 5!
+2024-05-28 09:29:37 - Lưu từ 가공성 trong trang 5!
+2024-05-28 09:29:37,494 - Lưu từ 가공식품 trong trang 5!
+2024-05-28 09:29:37 - Lưu từ 가공식품 trong trang 5!
+2024-05-28 09:29:37,494 - Lưu từ 가공업 trong trang 5!
+2024-05-28 09:29:37 - Lưu từ 가공업 trong trang 5!
+2024-05-28 09:29:37,494 - Lưu từ 가공인물 trong trang 5!
+2024-05-28 09:29:37 - Lưu từ 가공인물 trong trang 5!
+2024-05-28 09:29:37,495 - Lưu từ 가공적 1 trong trang 5!
+2024-05-28 09:29:37 - Lưu từ 가공적 1 trong trang 5!
+2024-05-28 09:29:37,495 - Lưu từ 가공적 2 trong trang 5!
+2024-05-28 09:29:37 - Lưu từ 가공적 2 trong trang 5!
+2024-05-28 09:29:37,495 - Lưu từ 가공품 trong trang 5!
+2024-05-28 09:29:37 - Lưu từ 가공품 trong trang 5!
+2024-05-28 09:29:37,498 - Đã lấy dữ liệu từ trang 5 trong 2.89 giây
+2024-05-28 09:29:37 - Đã lấy dữ liệu từ trang 5 trong 2.89 giây
+2024-05-28 09:29:37,498 - Tổng từ đã lấy trong Trang 5 là 10!
